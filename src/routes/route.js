@@ -178,7 +178,7 @@ let flag = 0
         players.push(newPlayer)
         return res.send(players)
     }else{
-return res.send('Pl')
+return res.send('Player is already present in the database')
     }
 })
 
