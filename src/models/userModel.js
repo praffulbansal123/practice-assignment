@@ -13,7 +13,15 @@ const userSchema = new mongoose.Schema({
         type: String,
         enum: ["male", "female", "LGBTQ"] //abcd will give an error
     },
-    age: Number
+    age: Number,
+    isIndian: Boolean,
+    parentInfo: {
+        fatherName: {type: String, required: true},
+        motherName: {type: String, required: true},
+        siblingName: String 
+    },
+    carList: [ String ]
+
 
 }, {timestamps: true});//whenever this collection is created on modified it will mark the time
 
