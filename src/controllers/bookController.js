@@ -29,7 +29,7 @@ const getBookInYear = async function(req, res){
 // { field: { $in: [<value1>, <value2>, ... <valueN> ] } }
 const getXINRBook = async function(req,res){
     let books = await BookModel.find({"price.indian":{$in: ["100","200","500"]}})
-res.send(books)
+    res.send(books)
 }
 
 const getRandomBooks = async function(req,res){
